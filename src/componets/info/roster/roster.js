@@ -5,12 +5,7 @@ import axios from 'axios'
 
 const roster = () => {
 
-    render () {
-        axios.get('https://api.nfl.com/docs/league/models/json/Team.json')
-        .then(data =>{
-            console.log(data)
-        })
-    }
+    
     return (
     <div className={styles.layout}>roster</div>
     )
