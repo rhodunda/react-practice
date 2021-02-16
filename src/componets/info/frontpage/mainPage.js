@@ -1,18 +1,28 @@
 import React, {useState, useEffect} from 'react'
-import AllNewsData from '../../fetch/frontPageFetch'
+import axios from 'axios'
+// import AllNewsData from '../../fetch/frontPageFetch'
 
 
 
 
 const FrontPage = () => {
 
-// const [FrontPageData, setFrontPageData] = useState();
+const [FrontPageData, setFrontPageData] = useState({});
 
 
 useEffect(() => {
-    const data = AllNewsData()
+    axios.get("http://site.api.espn.com/apis/site/v2/sports/football/nfl/news")
+    .then(res =>{
+        const articles = [res.data.articles]
+        setFrontPageData(articles)
+
+    })
+    .catch(err => {
+        console.log(err)
+    })
     
     },[])
+
 
 
     return (
