@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 // import AllNewsData from '../../fetch/frontPageFetch'
 
 
 
 
-const FrontPage = () => {
+function FrontPage ()  {
 
-const [FrontPageData, setFrontPageData] = useState({});
+const [FrontPageData, setFrontPageData] = useState([]);
 
 
 useEffect(() => {
@@ -24,30 +24,31 @@ useEffect(() => {
     },[]);
 
 
-    render() {
-
-
-        
-        const newsCard = FrontPageData.map(article => {
-            <div>
-                <h3>article.headline</h3>
-                <p>article.description</p>
-                <img>article.images[0].url</img>
-                <href>article.links.web.href</href>
-            </div>
-        })
-    
-
-
     return (
         <div>
-                {newsCard}
+            
+            { FrontPageData.map(article => {
+            //    {console.log(article[0].headline)}
+            //    {console.log(FrontPageData)}
+               for(let i = 0; i < article.length; i++) {
+                    //    {console.log(article[i].headline)}
+             return (
+               <div>
+                <h3>{article[i].headline}</h3>
+                <p>{article[i].description}</p>
+                </div>
+             )
+               }
+                {/* /* <img>{article.images[0].url}</img> */
+                /* <href>{article.links.web.href}</href> */}
+            })
+            }
+           
         </div>
     )
 
-    }
 
-}
+};
 
 
 export default FrontPage
