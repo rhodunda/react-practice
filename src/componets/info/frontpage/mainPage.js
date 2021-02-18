@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-// import AllNewsData from '../../fetch/frontPageFetch'
+import InfoCards from '../../UI/InfoCards'
 
 
 
 
-function FrontPage ()  {
+
+
+const FrontPage = () => {
 
 const [FrontPageData, setFrontPageData] = useState([]);
 
@@ -23,31 +25,29 @@ useEffect(() => {
     
     },[]);
 
+   
+
+    
+     
+          const news = () => {
+        for(let i = 0; i < FrontPageData.length; i++) {
+        return (
+            <InfoCards
+            headline={FrontPageData[i].headline}
+            img={FrontPageData[i].image}
+            dis={FrontPageData[i].description}
+            />
+        )
+            }
+        }
 
     return (
         <div>
-            
-            { FrontPageData.map(article => {
-            //    {console.log(article[0].headline)}
-            //    {console.log(FrontPageData)}
-               for(let i = 0; i < article.length; i++) {
-                    //    {console.log(article[i].headline)}
-             return (
-               <div>
-                <h3>{article[i].headline}</h3>
-                <p>{article[i].description}</p>
-                </div>
-             )
-               }
-                {/* /* <img>{article.images[0].url}</img> */
-                /* <href>{article.links.web.href}</href> */}
-            })
-            }
-           
+            {news()}
         </div>
     )
 
-
+    
 };
 
 
