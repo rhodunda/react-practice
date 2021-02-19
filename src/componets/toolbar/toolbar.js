@@ -5,8 +5,8 @@ const toolbar = () => {
 
     return (
     <div className={styles.layout}>
-    <div>NFl Junction</div>
-    <div>team select</div>
+    <div className={styles.logo}>NFl Junction</div>
+    <div className={styles.team}>team select</div>
     </div>
     )
 }

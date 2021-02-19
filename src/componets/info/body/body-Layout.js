@@ -3,16 +3,13 @@ import React from 'react'
 // import Story from '../storys/storys'
 // import Roster from '../roster/roster'
 import styles from './body.module.css'
-import FrontPage from '../frontpage/mainPage'
+import FrontPage from '../frontpage/FrontPage'
 
 const body = () => {
 
 return (
     <div className={styles.layout}>
     <FrontPage></FrontPage>
-    {/* <Stats></Stats>
-    <Story></Story>
-    <Roster></Roster> */}
     </div>
 )
 }
