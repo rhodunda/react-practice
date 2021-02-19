@@ -24,7 +24,6 @@ useEffect(() => {
     },[]);
 
     
-        console.log(FrontPageData)
     return (
         <div className={styles.front}>
             {FrontPageData.map(data => {

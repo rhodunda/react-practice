@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './toolbar.module.css'
 
-const toolbar = () => {
+const Toolbar = () => {
+
+    const [isShown, setIsShown] = useState(false)
+
 
     return (
     <div className={styles.layout}>
     <div className={styles.logo}>NFl Junction</div>
-    <div className={styles.team}>team select</div>
+    <button className={styles.team}
+     onMouseEnter={(() => setIsShown(true))}
+     onMouseLeave={(() => setIsShown(false))}>team select</button>
+     {(isShown) ?
+     
+     <h1>
+         working!!!!!!!!!!!!!!!!!
+     </h1> 
+     : null }
     </div>
     )
 }
 
-export default toolbar
+export default Toolbar

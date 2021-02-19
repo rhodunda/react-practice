@@ -8,10 +8,15 @@ const TeamSelect = () => {
 useEffect(() =>{
     axios.get('http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams')
     .then(res => {
-        console.log(res)
+        console.log(res.data.sports[0].leagues[0].teams)
     })
     .catch(err => console.log(err))
 },[])
+
+
+return (
+    <div></div>
+)
 }
 
 

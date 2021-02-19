@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 const infoCards = (props) => {
     
-    console.log(props.data.headline)
+  
     return (
         <div className={styles.card}>
             <Card.Body>

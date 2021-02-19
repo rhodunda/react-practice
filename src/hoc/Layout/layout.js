@@ -1,6 +1,7 @@
 import React from 'react'
 import Toolbar from '../../componets/toolbar/toolbar'
 import Body from '../../componets/info/body/body-Layout'
+import TeamSelect from '../../componets/teamSelect'
 
 
 const layout = ()  => {
@@ -8,6 +9,8 @@ const layout = ()  => {
     <div>
     <Toolbar></Toolbar>
     <Body></Body>
+    <TeamSelect/>
+
     </div>
     )
 }
