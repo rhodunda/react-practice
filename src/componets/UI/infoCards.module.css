@@ -17,8 +17,12 @@
 .img {
     border-bottom-left-radius: 6%;
     border-bottom-right-radius: 6%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     max-width: 100%;
     max-height: 100%;
+    padding-left: 0%;
     
 }
 
