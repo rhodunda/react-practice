@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './toolbar.module.css'
 import TeamSelect from '../../componets/teamSelect'
+import TeamDropDown from '../../componets/TeamDropDown'
 
 const Toolbar = () => {
 
@@ -9,14 +10,12 @@ const Toolbar = () => {
 
     return (
     <div className={styles.layout}>
-    <div className={styles.logo}>NFl Junction</div>
-    <button className={styles.team}
-     onMouseEnter={(() => setIsShown(true))}
-     onMouseLeave={(() => setIsShown(false))}>team select</button>
-     {(isShown) ?
-     <TeamSelect/>
-    
-     : <div/> }
+        <div className={styles.logo}>NFl Junction</div>
+        <TeamDropDown 
+            className={styles.team}
+            onMouseEnter={(() => setIsShown(true))}
+            onMouseLeave={(() => setIsShown(false))}>team select
+        </TeamDropDown>
     </div>
     )
 }
