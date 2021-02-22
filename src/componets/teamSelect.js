@@ -21,7 +21,7 @@ return (
     <div>
     {TeamData.map(data => {
        return <TeamDropDown
-        data={data}/>
+        data={data.team.displayName}/>
     })}
     </div>
 )

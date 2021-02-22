@@ -7,13 +7,13 @@ import 'react-dropdown/style.css';
 
 
 const TeamDropDown = (props) =>{
-
-
-    console.log(props.data.team.displayName)
+    let data = props.data
+    console.log(data)
     return (
-        <Dropdown options={props.data.team.displayName}>
-        </Dropdown>
-       
+        <Dropdown
+        //  options={props.data.team.displayName}
+        />
+
     )
 }
 
