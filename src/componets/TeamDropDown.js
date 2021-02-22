@@ -1,19 +1,14 @@
 import React from 'react'
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-
-
+import styles from '../componets/teamDropDown.module.css'
 
 
 
 const TeamDropDown = (props) =>{
-    let data = props.data
-    console.log(data)
-    return (
-        <Dropdown
-        //  options={props.data.team.displayName}
-        />
 
+    // const [isShown, setIsShown] = useState(false)
+
+    return (
+        <div className={styles.team}>Team Select</div>
     )
 }
 

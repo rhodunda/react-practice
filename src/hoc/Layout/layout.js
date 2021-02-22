@@ -9,8 +9,6 @@ const layout = ()  => {
     <div>
     <Toolbar></Toolbar>
     <Body></Body>
-    <TeamSelect/>
-
     </div>
     )
 }
