@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import TeamDropDown from '../componets/TeamDropDown'
+import TeamDropDown from './TeamDropDown'
 
 
 const TeamSelect = () => {
@@ -17,11 +17,12 @@ useEffect(() =>{
 },[])
 
 
+
 return (
     <div>
     {TeamData.map(data => {
-       return <TeamDropDown
-        data={data.team.displayName}/>
+        return <TeamDropDown
+        data={data.team}/>
     })}
     </div>
 )
