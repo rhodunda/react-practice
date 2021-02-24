@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './toolbar.module.css'
-import TeamSelect from '../../componets/teamSelectFetch'
+import TeamSelect from '../../componets/TeamDropDown'
 
 
 const Toolbar = () => {
