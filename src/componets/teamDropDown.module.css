@@ -10,4 +10,12 @@
 
 .teamSelect {
     color: white;
+    padding-left: 15px;
+    
+}
+
+.dropdownContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
 }

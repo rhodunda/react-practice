@@ -27,12 +27,16 @@ const TeamDropDown = () =>{
     }
     return (
         <div>
-        <div 
-        className={styles.team}
-        onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}
-        >Team Select</div>
-        {dropDown}
+            <div 
+                className={styles.team}
+                onMouseEnter={() => setIsShown(true)}
+                // onMouseLeave={() => setIsShown(false)}
+                >Team Select</div>
+            <div
+                className={styles.dropdownContainer}
+                onMouseLeave={() => setIsShown(false)}>
+                {dropDown}
+            </div>
         </div>
     )
 }
