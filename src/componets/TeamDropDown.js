@@ -22,7 +22,7 @@ const TeamDropDown = () =>{
     let dropDown = null 
     if(isShown) {
           dropDown = TeamData.map(data => {
-                return  <div className={styles.teamSelect}>
+                return  <div className={styles.teamSelect} onClick={() => console.log('click')}>
                             <div className={styles.dropDownTeam}>{data.team.displayName}</div>
                             <img src={data.team.logos[0].href} className={styles.image}></img>
                         </div> 
@@ -33,13 +33,12 @@ const TeamDropDown = () =>{
             <div 
                 className={styles.team}
                 onMouseEnter={() => setIsShown(true)}
-                // onMouseLeave={() => setIsShown(false)}
                 >Team Select</div>
             <div
                 className={styles.dropdownContainer}
                 onMouseLeave={() => setIsShown(false)}>
-                {dropDown}
             </div>
+                {dropDown}
         </div>
     )
 }

@@ -23,10 +23,16 @@
 }
 
 .image {
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 25px;
+    max-height: 25px;
+    padding-left: 2px;
 }
 
 .dropDownTeam {
     padding-bottom: 7px;
+}
+
+.teamSelect :hover {
+    color: #F8B201;
+    cursor: pointer;
 }
