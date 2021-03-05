@@ -11,6 +11,8 @@
 .teamSelect {
     color: white;
     padding-left: 15px;
+    display: flex;
+    flex-direction: row;
     
 }
 
@@ -18,4 +20,13 @@
     display: flex;
     flex-direction: column;
     margin-top: 35px;
+}
+
+.image {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.dropDownTeam {
+    padding-bottom: 7px;
 }
