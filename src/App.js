@@ -1,7 +1,7 @@
 import './App.css';
 import Layout from './hoc/Layout/layout'
 import { Component } from 'react'
-import { Route, Switch, withRouter, Redirect} from 'react-router-dom';
+import { Route, BrowserRouter as Router} from 'react-router-dom';
 import Team from './componets/Team'
 
 class App extends Component  {
@@ -9,21 +9,19 @@ class App extends Component  {
   render () {
 
     let routes = (
-      <Switch>
+      <Router>
       <Route path="/team" component={Team} />
-      <Redirect to='/'/>
-      </Switch>
+      <Route path='/' exact component={Layout}/>
+      </Router>
     )
 
 
   return (
     <div >
-      <Layout>
-        {routes}
-      </Layout>
+      {routes}
     </div>
   );
-  }
+}
 }
 
-export default withRouter(App);
+export default App;
