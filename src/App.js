@@ -1,7 +1,7 @@
 import './App.css';
 import Layout from './hoc/Layout/layout'
 import { Component } from 'react'
-import { Route, BrowserRouter as Router} from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import Team from './componets/Team'
 
 class App extends Component  {
@@ -10,8 +10,10 @@ class App extends Component  {
 
     let routes = (
       <Router>
-      <Route path="/team" component={Team} />
-      <Route path='/' exact component={Layout}/>
+        <Switch>
+          <Route  exact path="/team" component={Team} />
+          <Route path='/' exact component={Layout}/>
+        </Switch>
       </Router>
     )
 

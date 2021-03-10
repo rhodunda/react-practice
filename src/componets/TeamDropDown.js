@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import styles from '../componets/teamDropDown.module.css'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
+import Team from '../componets/Team'
 
 
 const TeamDropDown = () =>{
@@ -22,10 +24,12 @@ const TeamDropDown = () =>{
     let dropDown = null 
     if(isShown) {
           dropDown = TeamData.map(data => {
-                return  <div className={styles.teamSelect} onClick={() => console.log('click')}>
-                            <div className={styles.dropDownTeam}>{data.team.displayName}</div>
-                            <img src={data.team.logos[0].href} className={styles.image}></img>
-                        </div> 
+                return  <Link to='/team'>
+                                <div className={styles.teamSelect} >
+                                    <div className={styles.dropDownTeam} >{data.team.displayName}}</div>
+                                    <img src={data.team.logos[0].href} className={styles.image}></img>
+                                </div> 
+                        </Link>
             })
     }
     return (
