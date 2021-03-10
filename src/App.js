@@ -11,7 +11,7 @@ class App extends Component  {
     let routes = (
       <Router>
         <Switch>
-          <Route  exact path="/team" component={Team} />
+          <Route  exact path="/team/:id" component={Team} />
           <Route path='/' exact component={Layout}/>
         </Switch>
       </Router>

@@ -24,9 +24,9 @@ const TeamDropDown = () =>{
     let dropDown = null 
     if(isShown) {
           dropDown = TeamData.map(data => {
-                return  <Link to='/team'>
+                return  <Link to={'/team/' + data.team.displayName}>
                                 <div className={styles.teamSelect} >
-                                    <div className={styles.dropDownTeam} >{data.team.displayName}}</div>
+                                    <div className={styles.dropDownTeam} >{data.team.displayName}</div>
                                     <img src={data.team.logos[0].href} className={styles.image}></img>
                                 </div> 
                         </Link>
