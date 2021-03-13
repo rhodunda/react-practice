@@ -7,9 +7,11 @@ const Team = () => {
     console.log(window.location.href.replace('%20', '').split('team/')[1])
     
     
-    // get team name from props
-    // make api call for team infomation
-    // make sure to render the write team info fix url
+    useEffect(() =>{
+        // use window.location.href.replace('%20', '').split('team/')[1] 
+        // to get team name first letter is capitilized
+        // make api call for team infomation
+    },[])
 
 
     return(
