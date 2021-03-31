@@ -13,7 +13,7 @@ const Team = () => {
 
         setTeamName(window.location.href.replace('%20', '').split('team/')[1])
 
-    },[])
+    })
 
     //*********************************************************** */
     // roster 
