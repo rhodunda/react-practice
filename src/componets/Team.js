@@ -7,11 +7,14 @@ const Team = () => {
     console.log(window.location.href.replace('%20', '').split('team/')[1])
     
     
-    useEffect(() =>{
-        // use window.location.href.replace('%20', '').split('team/')[1] 
-        // to get team name first letter is capitilized
-        // make api call for team infomation
-    },[])
+    // useEffect(() =>{
+
+
+        
+    //     // use window.location.href.replace('%20', '').split('team/')[1] 
+    //     // to get team name first letter is capitilized
+    //     // make api call for team infomation
+    // },[])
 
 
     return(
