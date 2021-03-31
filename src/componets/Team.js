@@ -1,26 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Toolbar from '../componets/toolbar/toolbar'
+
 
 
 const Team = () => {
 
-    console.log(window.location.href.replace('%20', '').split('team/')[1])
+    // console.log(window.location.href.replace('%20', '').split('team/')[1])
+
+    const [TeamName, setTeamName] = useState()
     
-    
-    // useEffect(() =>{
+    useEffect(() =>{
 
+        setTeamName(window.location.href.replace('%20', '').split('team/')[1])
 
-        
-    //     // use window.location.href.replace('%20', '').split('team/')[1] 
-    //     // to get team name first letter is capitilized
-    //     // make api call for team infomation
-    // },[])
+    },[])
 
-
+    //*********************************************************** */
+    // roster 
+    //   http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/mia/roster
+    // standing
+    //   http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams
+    //************************************************************* */
     return(
         <div>
         <Toolbar/>
-        <div>Team Page</div>
+        <div>{TeamName}</div>
         </div>
     )
 }

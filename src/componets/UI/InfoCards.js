@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 const infoCards = (props) => {
      
 
-    console.log(props.data.images)
+    console.log(props)
   
     return (
         <div className={styles.card}>
