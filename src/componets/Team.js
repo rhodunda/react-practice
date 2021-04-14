@@ -10,18 +10,21 @@ const Team = () => {
     // console.log(window.location.href.replace('%20', '').split('team/')[1])
 
     const [TeamName, setTeamName] = useState()
-    const [standings, setStandings] = useState()
+    const [AllTeamData, setAllTeamData] = useState()
+    const [CurrentTeamData, setCurrentTeamData] = useState()
+
     
     useEffect(() =>{
 
         setTeamName(window.location.href.replace('%20', ' ').split('team/')[1])
-
     })
 
     useEffect(()=> {
         axios.get('http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams')
         .then(res => {
-            console.log(res)
+            console.log(res.data.sports[0].leagues[0].teams)
+            const teamData = res.data.sports[0].leagues[0].teams
+            setAllTeamData(teamData)
         })
         .catch(err => console.log(err))
     }, [])
@@ -32,6 +35,9 @@ const Team = () => {
     // standing
     //   http://site.api.espn.com/apis/site/v2/sports/football/nfl/teams
     //************************************************************* */
+
+
+
     return(
         <div>
         <Toolbar/>
